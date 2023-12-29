@@ -1,13 +1,11 @@
 FROM node:20-alpine
 
-RUN apk --no-cache add git
+RUN apk add --no-cache git
 
-WORKDIR /app
+RUN git clone https://github.com/ooxcrimson/sh.git
 
-RUN git clone https://github.com/shuttlenetwork/shuttle.git
-
-WORKDIR /app/shuttle
+WORKDIR /sh
 
 RUN npm install
 
-CMD npm start
+CMD ["npm", "start"]
