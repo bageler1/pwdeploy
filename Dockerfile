@@ -1,11 +1,7 @@
 FROM node:20-alpine
 
-RUN apk add --no-cache git
-
-RUN git clone https://github.com/ooxcrimson/sh.git
-
-WORKDIR /sh
+RUN git clone https://github.com/bageler1/pwinterrender/
 
 RUN npm install
 
-CMD ["npm", "start"]
+CMD ["npm", "run", "start"]
